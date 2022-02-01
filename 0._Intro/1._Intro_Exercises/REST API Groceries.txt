@@ -1,0 +1,7 @@
+Method    - 	Endpoint       - 	What does it do?
+GET		/groceries		Retrieves all ressources from the collection (all groceries)
+GET		/groceries/{id}		Retrieves a ressource (grocery) by id
+POST		/groceries		Creates a new ressource (grocery)
+PUT		/groceries/{id}		Updates a ressource (grocery) by id
+PATCH		/groceries/{id}		Partially updates a ressource (grocery) by id
+DELETE		/groceries/{id}		Deletes a ressource (grocery) by id

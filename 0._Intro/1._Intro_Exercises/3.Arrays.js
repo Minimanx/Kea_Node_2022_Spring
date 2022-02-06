@@ -72,6 +72,10 @@ for (let i = 0; i < lettersExpanded.length; i++) {
     }
 }
 
+for (let i = 1; i < lettersExpanded.length; i += 2) {
+    console.log(lettersExpanded[i]);
+}
+
 // --------------------------------------
 // Exercise 8 - For loop and if statement
 

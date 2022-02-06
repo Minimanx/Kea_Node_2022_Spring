@@ -12,7 +12,7 @@ const numberTwo = "2.30";
 
 console.log(parseFloat(numberOne) + parseFloat(numberTwo))
 //alternatively
-let result = parseFloat(numberOne) + parseFloat(numberTwo);
+const result = parseFloat(numberOne) + parseFloat(numberTwo);
 console.log(result);
 
 // --------------------------------------
@@ -21,7 +21,7 @@ console.log(result);
 const anotherNumberOne = "1.10";
 const anotherNumberTwo = "2.30";
 
-let anotherResult = (parseFloat(anotherNumberOne) + parseFloat(anotherNumberTwo)).toFixed(2);
+const anotherResult = (parseFloat(anotherNumberOne) + parseFloat(anotherNumberTwo)).toFixed(2);
 
 console.log(anotherResult);
 
@@ -58,7 +58,7 @@ const fact = "You are learning javascript!";
 
 // capitalize the J in Javascript
 
-let factCapital = fact.replace("javascript", "Javascript");
+let factCapital = fact.replace("j", "J");
 
 console.log(factCapital);
 

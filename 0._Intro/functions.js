@@ -6,6 +6,8 @@ function greetings() {
     console.log("Hello")
 }
 
+
+
 //anonymous function (function without a name) after the equal sign
 const greetingsInAVariable = function() {
     console.log("Hello anonymously")
@@ -46,3 +48,6 @@ const drinkingMore = (name, object) => {
 }
 
 doingSomethingNew(drinkingMore, `Carl`, `soda`);
+
+const result = doingSomething(name => name + " is studying", "Juan");
+console.log(result);

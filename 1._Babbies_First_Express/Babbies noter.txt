@@ -1,0 +1,21 @@
+POM.xml (build tool for Java, mvn) //entrypoint for Java project
+
+meta-data (version number, name of project, java version, etc)
+defines dependencies (version)
+defines build steps
+
+
+npm (node package manager, installs with node)
+meta-data
+dependencies
+build steps => called scripts in npm
+
+npm dependencies = key + value (package name + version number)
+npm allows semantic versioning
+
+package.json //is the entry point for the project
+{
+    "dependencies": {
+        "express" : "4.17.2"
+    }
+}

@@ -1,0 +1,24 @@
+node.js is an environment - javascript runtime built on chrome javascript engine
+node.js serverside 100%
+
+cd "navn" //gå til
+mkdir "navn" //ny mappe
+
+
+powershell: node - REPL - ctrl+c for quit
+
+git add -A
+git commit -m "message"
+git push
+
+type coercion
+
+== evaluate with type coercion
+=== no type coercion (eval object type, fx)
+
+javascript:
+const object = {
+	name = "hello"
+};
+
+key = name, value = "hello". Key-value-pair

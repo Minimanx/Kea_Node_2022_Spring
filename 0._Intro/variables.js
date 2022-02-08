@@ -1,5 +1,14 @@
 //"use strict";
 
+
+const person = {
+    //Key: Value - Key value pair
+    //Key: Value - Key value pair
+    //Key: Value - Key value pair
+    //Key: Value - Key value pair
+    name: "Carl"
+}
+
 var someVariable = ""; //var is global and not scope-specifik, don't use
 
 totalGlobal = "NEVER do this!!!" //variable not defined

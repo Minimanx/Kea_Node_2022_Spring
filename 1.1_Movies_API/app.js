@@ -6,6 +6,8 @@ app.use(express.json());
 const listOfMovies = [];
 let id = 1;
 
+// JSON object for testing: {"title": "Spider-Man", "releaseYear": 2002}
+
 app.get("/movies", (req, res) => {
     res.send(listOfMovies);
 });
@@ -24,6 +26,26 @@ app.post("/movies", (req, res) => {
     res.send(movie);
 });
 
+app.put("/movies/:id", (req, res) => {
+    const getById = parseInt(req.params.id);
+    const movieIndex = listOfMovies.findIndex(x => x.id === getById);
+    listOfMovies[movieIndex].releaseYear = req.body.releaseYear;
+    listOfMovies[movieIndex].title = req.body.title;
+    res.send(listOfMovies[movieIndex]);
+});
+
+app.patch("/movies/:id", (req, res) => {
+    const getById = parseInt(req.params.id);
+    const movieIndex = listOfMovies.findIndex(x => x.id === getById);
+    if(req.body.title != undefined){
+        listOfMovies[movieIndex].title = req.body.title;
+    }
+    if(req.body.releaseYear != undefined){
+        listOfMovies[movieIndex].releaseYear = req.body.releaseYear;
+    }
+    res.send(listOfMovies[movieIndex]);
+});
+
 app.delete("/movies/:id", (req, res) => {
     const getById = parseInt(req.params.id);
     const movieIndex = listOfMovies.findIndex(x => x.id === getById);
@@ -35,11 +57,6 @@ app.delete("/movies/:id", (req, res) => {
         res.send(movie);
     }
 });
-
-
-
-
-
 
 
 

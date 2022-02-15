@@ -3,7 +3,11 @@ const app = express();
 
 app.use(express.json());
 
-//
+console.log(Date());
+console.log(new Date().getDay());
+console.log(new Date().getMonth());
+
+
 app.get("/libraries", (req, res) => {
     res.send(req.query);
 });

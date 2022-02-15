@@ -3,20 +3,27 @@ const app = express();
 
 app.use(express.json());
 
-const listOfMovies = [];
-let id = 1;
+const listOfMovies = [
+    { id: 1, "title": "Spider-Man", "releaseYear": 2002 },
+    { id: 2, "title": "Spider-Man 2", "releaseYear": 2004 },
+    { id: 3, "title": "Spider-Man 3", "releaseYear": 2006 }
+];
+
+let id = 4;
 
 // JSON object for testing: {"title": "Spider-Man", "releaseYear": 2002}
 
 app.get("/movies", (req, res) => {
-    res.send(listOfMovies);
+    res.send({movies: listOfMovies});
 });
 
 app.get("/movies/:id", (req, res) => {
     const getById = parseInt(req.params.id);
-    const movie = listOfMovies.find(n => n.id === getById);
-    res.send(movie);
+    const foundMovie = listOfMovies.find(movie => movie.id === getById);
+    foundMovie ? res.send({movie: foundMovie}) : res.status(204).send({});
 });
+
+
 
 app.post("/movies", (req, res) => {
     const movie = req.body;
@@ -54,7 +61,7 @@ app.delete("/movies/:id", (req, res) => {
     }
     else{
         const movie = listOfMovies.splice(movieIndex, 1);
-        res.send(movie);
+        res.send({data: movie});
     }
 });
 

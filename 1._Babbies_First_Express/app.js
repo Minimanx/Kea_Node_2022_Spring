@@ -39,5 +39,8 @@ app.post("/opinion", (req, res) => {
 });
 
 
-
-app.listen(8080); //8080 default dev port for HTTP, 9090 for HTTPS. Convention to have on the bottom
+//8080 default dev port for HTTP, 9090 for HTTPS. Convention to have on the bottom
+//good practice to console.log the port and that it's running.
+app.listen(8080, () => {
+    console.log("Server is running on port", 8080);
+}); 

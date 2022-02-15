@@ -19,3 +19,5 @@ package.json //is the entry point for the project
         "express" : "4.17.2"
     }
 }
+
+app.js - express naming convention, start of your app

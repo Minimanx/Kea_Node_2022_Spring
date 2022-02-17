@@ -1,0 +1,20 @@
+how do you send data in a GET request?
+
+path variables - url: /thisisdynamic
+query string - url: ?key=value
+
+for body parsing, not sending
+app.use(express.json());
+
+
+send as json
+app.get("/movies", (req, res) => {
+    res.send(   {movies: listOfMovies}   );
+});
+
+loops
+nodemon
+send data
+
+immutability
+crosseyed / cross site scripting

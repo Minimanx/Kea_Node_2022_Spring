@@ -1,0 +1,12 @@
+path variable
+query string
+
+pre
+post notation
+
+...Object <- spread
+
+
+SSR
+search engine finds nothing on client side cause page starts empty, serverside is instant
+SCO

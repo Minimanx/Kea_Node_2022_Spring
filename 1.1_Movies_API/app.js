@@ -1,4 +1,7 @@
+//library
 const express = require("express");
+
+//instance of server
 const app = express();
 
 app.use(express.json());
@@ -9,7 +12,7 @@ const listOfMovies = [
     { id: 3, "title": "Spider-Man 3", "releaseYear": 2006 }
 ];
 
-let id = 4;
+let id = 3;
 
 // JSON object for testing: {"title": "Spider-Man", "releaseYear": 2002}
 
@@ -23,12 +26,9 @@ app.get("/movies/:id", (req, res) => {
     foundMovie ? res.send({movie: foundMovie}) : res.status(204).send({});
 });
 
-
-
 app.post("/movies", (req, res) => {
     const movie = req.body;
-    movie.id = id;
-    id++;
+    movie.id = ++id;
     listOfMovies.push(movie);
     res.send(movie);
 });
@@ -44,6 +44,10 @@ app.put("/movies/:id", (req, res) => {
 app.patch("/movies/:id", (req, res) => {
     const getById = parseInt(req.params.id);
     const movieIndex = listOfMovies.findIndex(x => x.id === getById);
+
+    //alternative
+    const foundMovie = listOfMovies.find(movie => movie.id === Number(req.params.id));
+
     if(req.body.title != undefined){
         listOfMovies[movieIndex].title = req.body.title;
     }
@@ -52,6 +56,20 @@ app.patch("/movies/:id", (req, res) => {
     }
     res.send(listOfMovies[movieIndex]);
 });
+
+//better patch
+app.patch("/movies/:id", (req, res) => {
+    const foundMovieIndex = movies.findIndex(movie => movie.id === Number(req.params.id));
+    if (foundMovieIndex !== -1){
+        const foundMovie = listOfMovies[foundMovieIndex];
+        const movieToUpdateWith = { ...foundMovie, ...req.body, id: foundMovie.id };
+        movies[foundMovieIndex] = movieToUpdateWith;
+        res.send({movie: movieToUpdateWith});
+    } else {
+        res.status(404).send({});
+    } 
+});
+
 
 app.delete("/movies/:id", (req, res) => {
     const getById = parseInt(req.params.id);

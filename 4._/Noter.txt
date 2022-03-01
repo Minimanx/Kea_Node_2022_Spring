@@ -1,0 +1,23 @@
+npm + maven = build tools
+hard seperation between programming languages and build tools
+
+package.json npm
+pom.xml maven
+
+npm + maven (build tools) do 3 things:
+defines dependencies (packages)
+build steps (scripts in npm)
+meta data (npm init fx)
+
+
+
+scripts in npm is bash (anything you write in terminal)
+
+PORT=9090 nodemon.cmd app.js
+npm i cross-env
+
+cross-env in script invokes a script
+
+
+app.get("/"... etc) = route
+router = object with many routes

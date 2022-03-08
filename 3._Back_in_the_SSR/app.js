@@ -9,7 +9,6 @@ const nav = fs.readFileSync("./public/components/nav.html").toString();
 const frontpage = fs.readFileSync("./public/pages/frontpage/index.html").toString();
 const cheesegallery = fs.readFileSync("./public/pages/cheesegallery/cheesegallery.html").toString();
 const footer = fs.readFileSync("./public/components/footer.html").toString();
-
 const frontpagePage = nav + frontpage + footer;
 const cheesegalleryPage = nav + cheesegallery + footer;
 

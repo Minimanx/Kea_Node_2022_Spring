@@ -9,12 +9,21 @@
 </head>
 <body>
     <h1>Welcome</h1>
+    <div>
+        <h1>
+            Amount of favorite animals:
+        </h1>
+        <p id="favoriteanimals"></p>
+    </div>
 
     <script src="./frontpage/index.js"></script>
     <script>
-        setTimeout(() => {
-            window.location.href = "/weather";
-        }, 1500);
+        fetch("/amountoffavoriteanimals")
+        .then(result => result.json())
+        .then(result => {
+            const favoriteAnimalsDiv = document.getElementById("favoriteanimals");
+            favoriteAnimalsDiv.innerText = result.data;
+        });
     </script>
 </body>
 </html>

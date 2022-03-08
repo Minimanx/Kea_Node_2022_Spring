@@ -49,5 +49,5 @@ const drinkingMore = (name, object) => {
 
 doingSomethingNew(drinkingMore, `Carl`, `soda`);
 
-const result = doingSomething(name => name + " is studying", "Juan");
-console.log(result);
+const result4 = doingSomething(name => name + " is studying", "Juan");
+console.log(result4);

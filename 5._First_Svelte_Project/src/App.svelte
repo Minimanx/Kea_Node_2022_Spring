@@ -1,9 +1,14 @@
 <script>
 	export let name;
+	const extension = true;
+
+	import Profile from "./pages/Profile/Profile.svelte";
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
+	<Profile/>
+	<p>{2+2}{extension}</p>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 

@@ -1,0 +1,6 @@
+DOM = tree
+
+npx degit sveltejs/template name-for-local-project
+doesnt install svelte, it's for scaffolding. it clones the latest svelte template git
+
+then you need to npm i, to install the dependencies

@@ -2,12 +2,16 @@
 	export let name;
 	const extension = true;
 
+	import Tree from "./pages/Tree/Tree.svelte";
 	import Profile from "./pages/Profile/Profile.svelte";
+	import Dog from "./pages/Dog/Dog.svelte";
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<Profile/>
+	<Profile name={name}/>
+	<Tree/>
+	<Dog name={name}/>
 	<p>{2+2}{extension}</p>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>

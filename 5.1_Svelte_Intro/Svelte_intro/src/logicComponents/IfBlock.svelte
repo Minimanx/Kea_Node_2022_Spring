@@ -1,5 +1,5 @@
 <script>
-	let crewmate = { checkedIn: false };
+	const crewmate = { checkedIn: false };
 
 	function toggle() {
 		crewmate.checkedIn = !crewmate.checkedIn;

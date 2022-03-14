@@ -1,5 +1,5 @@
 <script>
-    let words = ["console!", "the ", "in ", "look ", "don't ", " but "];
+    const words = ["console!", "the ", "in ", "look ", "don't ", " but "];
     let usedWords = [];
 
     function addWords() { 

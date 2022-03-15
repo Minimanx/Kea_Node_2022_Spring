@@ -56,13 +56,13 @@
     }
 </script>
 
+<button on:click={NewPerson}>Add random person</button>
+<br>
+
 <table>
     <TableHead object={persons[0]} />
 
-    {#each persons.slice(pageNumberLow, pageNumberHigh) as person, i}
-        <!-- {#if i >= pageNumberLow && i <= pageNumberHigh}
-        <TableRow object={person}/>
-        {/if} -->
+    {#each persons.slice(pageNumberLow, pageNumberHigh) as person (person.name)}
         <TableRow object={person}/>
     {/each}
 </table>
@@ -77,9 +77,7 @@
     </div>
 {/if}
 
-<br>
 
-<button on:click={NewPerson}>Add random person</button>
 <br>
 <button on:click={SortPerson}>Sort</button>
 

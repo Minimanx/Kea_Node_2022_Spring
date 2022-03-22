@@ -1,0 +1,10 @@
+svelte:
+degit gets the files without all the Git baggage
+
+rollup - bundler. transpiles our code to vanilla js
+
+sirv : serves the public folder as your website
+
+-c compiles, -w watch (for changes)
+
+npm run start : sirv : add --single

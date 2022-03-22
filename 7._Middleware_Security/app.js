@@ -1,6 +1,8 @@
 import express from "express";
 const app = express();
 
+import _ from "./public/password.js";
+
 app.use(express.static("public"));
 
 import helmet from "helmet";
@@ -22,6 +24,14 @@ const authLimiter = rateLimit({
 app.use(baseLimiter);
 app.use("/auth", authLimiter);
 
+import session from "express-session";
+app.use(session({
+    secret: 'keyboard cat you should change this',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
+
 app.get("/auth", (req, res) => {
     res.send({ message: "You are trying to log in" });
 });
@@ -31,6 +41,9 @@ app.get("/auth", (req, res) => {
 }); */
 
 app.use("/frontdoor", ipLogger);
+
+import coffeeRouter from "./routers/coffee.js";
+app.use(coffeeRouter);
 
 function ipLogger(req, res, next) {
     console.log(req.ip);

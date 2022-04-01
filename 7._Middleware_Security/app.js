@@ -1,6 +1,10 @@
 import express from "express";
 const app = express();
 
+//used for type=module applications instead of __dirname
+import path from "path";
+console.log(path.resolve("public/computer.html"));
+
 import _ from "./public/password.js";
 
 app.use(express.static("public"));
@@ -32,13 +36,13 @@ app.use(session({
     cookie: { secure: false }
 }));
 
-app.get("/auth", (req, res) => {
+app.post("/auth", (req, res) => {
     res.send({ message: "You are trying to log in" });
 });
 
-/* app.get("/computer", (req, res) => {
-    res.sendFile(__dirname + "/public/computer.html");
-}); */
+app.get("/computer", (req, res) => {
+    res.sendFile(path.resolve("public/computer.html"));
+});
 
 app.use("/frontdoor", ipLogger);
 

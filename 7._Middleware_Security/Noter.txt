@@ -1,0 +1,16 @@
+type="module" allows import export with new syntax
+
+2 types of export/import systems. Commonjs and module
+
+middleware = logic you can add on your server, before you do your own handling
+
+
+
+
+memorize router setup
+
+
+svelte lifecycles
+
+
+prepared statements

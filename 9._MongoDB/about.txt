@@ -1,0 +1,17 @@
+NoSQL database.
+Document database.
+Takes JSON.
+collections -- tables(SQL)
+
+{
+    key: "value"
+}
+
+No rows, no cells.
+
+jsonSchema vs ODM
+
+C - insert
+R - find
+U - update
+D - deleteOne, deleteMany / remove

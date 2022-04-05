@@ -1,3 +1,3 @@
-import { writable } from "svelte/store";
+import { readable } from "svelte/store";
 
-export const baseURL = writable("http://localhost:5000");
+export const baseURL = readable("http://localhost:5000");

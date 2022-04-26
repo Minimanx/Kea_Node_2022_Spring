@@ -1,0 +1,21 @@
+http.createServer() similar to Express, just the basic form. You could make your own express package from this for example.
+
+If a client could ask for any file on the backend and get it, it would be very insecure.
+That's why we choose to serve a specific (public) folder as static.
+
+Client server model: We send a request, we get a response.
+
+Servers cant send anything unprompted to client, therefore they invented websockets. A protocol.
+
+Two keywords. Emit - Emits data. On - On receiving data, takes a callback function that does something.
+
+Because we're serving our HTML from our server, we don't have to deal with origins and ports when making a socket in our HTML
+Same as CORS, etc.
+
+CDN content delivery network.
+
+{ data } = destructure
+
+Rooms and namespaces are ways to seperate things in websockets (.io)
+
+REMEMBER REST CONVENTION NAMING (PLURAL ETC) IN EXAM PROJECTS
